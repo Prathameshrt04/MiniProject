@@ -1,0 +1,147 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f5f7fa, #c3d9f4);
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1200px;
+    padding: 30px; /* Reduced padding inside the container */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* College Logo */
+.college-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px; /* Reduced margin to decrease space under the logo */
+    margin-top: 2px;
+    border-radius: 10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Name */
+.project-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 20px; /* Reduced margin to decrease space below project name */
+}
+
+/* Developers Section */
+.developers-section {
+    margin-bottom: 30px; /* Reduced margin below the developers section */
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 15px; /* Reduced margin below the section title */
+}
+
+/* Developer Cards */
+.cards-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 250px;
+    z-index: 1;
+}
+
+.developer-card {
+    position: absolute;
+    width: 200px;
+    margin: 0 10px;
+    padding: 15px; /* Reduced padding inside the developer cards */
+    background-color: #ecf0f1;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s ease;
+    opacity: 0.8;
+    transform: scale(0.8);
+}
+
+.highlighted {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.developer-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Reduced space below the developer image */
+}
+
+.developer-name {
+    font-size: 1.4rem;
+    color: #2c3e50;
+}
+
+.developer-contribution {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* Project Description */
+.project-description {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 30px; /* Reduced space below the project description */
+    line-height: 1.5; /* Slightly tighter line spacing */
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px; /* Reduced space above the buttons */
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #2980b9;
+    padding: 12px 20px; /* Reduced padding inside buttons */
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin: 8px; /* Reduced spacing between the buttons */
+}
+
+.btn:hover {
+    background-color: #1f639e;
+    transform: translateY(-5px);
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
