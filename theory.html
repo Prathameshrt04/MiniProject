@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theory of Merge Sort and Quick Sort</title>
+    <link rel="stylesheet" href="Design\theory.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Theory: Merge Sort & Quick Sort</h1>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="visualization.html" class="nav-link">Visualization</a>
+            <a href="comparison.html" class="nav-link">Comparison</a>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <p>Sorting algorithms are essential in computer science. Here, we'll explore both Merge Sort and Quick Sort with theory, code, and a step-by-step example for both algorithms.</p>
+    </section>
+
+    <!-- Two Row Layout for Sorting Algorithms -->
+    <section class="sorting-algorithms">
+        <!-- First Row: Merge Sort -->
+        <div class="algorithm-row">
+            <h2>Merge Sort</h2>
+            <div class="page theory-page" data-type="merge-sort">
+                <h3>Merge Sort Theory</h3>
+                <p><strong>Definition:</strong> A stable, comparison-based, divide-and-conquer sorting algorithm. It recursively divides the input array into halves, sorts each half independently, and then merges the two sorted halves back together.</p>
+                <p><strong>Time Complexity:</strong> O(n log n) | <strong>Space Complexity:</strong> O(n)</p>
+                <p><strong>Key Features:</strong> Merge Sort is stable and works well with large datasets. It is particularly useful for sorting linked lists, as it does not require random access to elements.</p>
+                <p><strong>Use Cases:</strong> Ideal for sorting large datasets where consistent performance is needed. Commonly used in external sorting algorithms.</p>
+            </div>
+            <div class="page code-page" data-type="merge-sort">
+                <h3>Merge Sort Code (C):</h3>
+                <pre><code>
+                    // Merge two halves
+                    void merge(int arr[], int left, int mid, int right) {
+                        // Code for merging two subarrays
+                    }
+                    // Recursive Merge Sort
+                    void mergeSort(int arr[], int left, int right) {
+                        if (left < right) {
+                            int mid = left + (right - left) / 2;
+                            mergeSort(arr, left, mid);
+                            mergeSort(arr, mid + 1, right);
+                            merge(arr, left, mid, right);
+                        }
+                    }
+                </code></pre>
+            </div>
+            <div class="page example-page" data-type="merge-sort">
+                <h3>Merge Sort Example:</h3>
+                <p>Array: [38, 27, 43, 3, 9, 82, 10]</p>
+                <p>1. Divide: [38, 27, 43] and [3, 9, 82, 10]</p>
+                <p>2. Further Divide: [38], [27, 43], [3, 9], [82, 10]</p>
+                <p>3. Further Divide: [27], [43], [3], [9], [82], [10]</p>
+                <p>4. Merge and Sort: [27, 43]</p>
+                <p>5. Merge and Sort: [3, 9]</p>
+                <p>6. Merge and Sort: [10, 82]</p>
+                <p>7. Merge: [38] and [27, 43] to form [27, 38, 43]</p>
+                <p>8. Merge: [3, 9] and [10, 82] to form [3, 9, 10, 82]</p>
+                <p>9. Final Merge: [27, 38, 43] and [3, 9, 10, 82] to form [3, 9, 10, 27, 38, 43, 82]</p>
+
+            </div>
+            <div class="buttons">
+                <button class="nav-button" data-page="theory-page">Theory</button>
+                <button class="nav-button" data-page="code-page">Code</button>
+                <button class="nav-button" data-page="example-page">Example</button>
+            </div>
+        </div>
+
+        <!-- Second Row: Quick Sort -->
+        <div class="algorithm-row">
+            <h2>Quick Sort</h2>
+            <div class="page theory-page" data-type="quick-sort">
+                <h3>Quick Sort Theory</h3>
+                <p><strong>Definition:</strong> An efficient, in-place, divide-and-conquer sorting algorithm. It works by selecting a pivot element and partitioning other elements into two sub-arrays based on comparison with the pivot.</p>
+                <p><strong>Time Complexity:</strong> O(n log n) | <strong>Space Complexity:</strong> O(log n)</p>
+                <p><strong>Key Features:</strong> Quick Sort is often faster in practice than other O(n log n) algorithms, such as Merge Sort and Heap Sort, due to better locality of reference.</p>
+                <p><strong>Use Cases:</strong> Frequently used for in-memory sorting of small to medium-sized arrays. Widely applied in systems where memory usage is a concern.</p>
+            </div>
+            <div class="page code-page" data-type="quick-sort">
+                <h3>Quick Sort Code (C):</h3>
+                <pre><code>
+                    // Partition function
+                    int partition(int arr[], int low, int high) {
+                        int pivot = arr[low]; // First element as pivot
+                        // Code for partition
+                    }
+                    // Quick Sort function
+                    void quickSort(int arr[], int low, int high) {
+                        if (low < high) {
+                            int pi = partition(arr, low, high);
+                            quickSort(arr, low, pi - 1);
+                            quickSort(arr, pi + 1, high);
+                        }
+                    }
+                </code></pre>
+            </div>
+            <div class="page example-page" data-type="quick-sort">
+                <h3>Quick Sort Example:</h3>
+                <p>Array: [10, 80, 30, 90, 40, 50, 70]</p>
+                <p>1. Pivot: 10 | Partition: [10] | Right Sub-array: [80, 30, 90, 40, 50, 70]</p>
+                <p>2. Pivot: 80 | Partition: [30, 40, 50, 70] and [90]</p>
+                <p>3. Pivot: 30 | Left Sub-array: [10] | Right Sub-array: [40, 50, 70, 80, 90]</p>
+                <p>4. Pivot: 70 | Partition: [30, 40, 50] and [80, 90]</p>
+                <p>5. Final Order: [10, 30, 40, 50, 70, 80, 90]</p>
+            </div>
+            <div class="buttons">
+                <button class="nav-button" data-page="theory-page">Theory</button>
+                <button class="nav-button" data-page="code-page">Code</button>
+                <button class="nav-button" data-page="example-page">Example</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Developed by Team. <a href="index.html">Back to Home</a></p>
+    </footer>
+    <script src="Function/theory.js"></script>
+</body>
+</html>
