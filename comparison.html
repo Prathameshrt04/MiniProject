@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison - Merge Sort vs Quick Sort</title>
+    <link rel="stylesheet" href="Design\comparison.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Comparison: Merge Sort vs Quick Sort</h1>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="theory.html" class="nav-link">Theory</a>
+            <a href="visualization.html" class="nav-link">Visualization</a>
+        </nav>
+    </div>
+
+    <div class="input-section">
+        <input type="text" id="compare-numbers" placeholder="Enter numbers separated by commas">
+        <button id="compare-button">Compare</button>
+    </div>
+
+    <div class="comparison-container">
+        <div class="left-comparison">
+            <h2>Merge Sort</h2>
+            <p id="merge-time">CPU Time: - ms</p>
+        </div>
+        <div class="right-comparison">
+            <h2>Quick Sort</h2>
+            <p id="quick-time">CPU Time: - ms</p>
+        </div>
+    </div>
+
+    <div class="predefined-lists">
+        <h3>Predefined Lists: </h3>
+        <button onclick="copyList('sorted')">Copy Sorted List</button>
+        <button onclick="copyList('reverseSorted')">Copy Reverse Sorted List</button>
+        <button onclick="copyList('nearlySorted')">Copy Nearly Sorted List</button>
+        <button onclick="copyList('random')">Copy Random List</button>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Developed by Team. <a href="index.html">Back to Home</a></p>
+    </footer>
+
+    <script src="Function/comparison.js"></script>
+</body>
+</html>
